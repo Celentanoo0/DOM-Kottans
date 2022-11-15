@@ -68,3 +68,63 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
 }
+
+.wrapper {
+  min-height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #04A7FF;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: inherit;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+}
+
+main {
+  margin: 60px 0 0 0;
+  flex: 1 1 auto;
+  display: flex;
+}
+
+.sidebar {
+  flex: 0 1 20%;
+  background: rgb(232, 171, 171);
+}
+
+.content {
+  flex: 1 1 auto;
+  background: rgb(216, 234, 185);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #04A7FF;
+  color: white;
+  height: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 14px;
+  letter-spacing: 1.1px;
+}
