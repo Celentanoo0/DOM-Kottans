@@ -4,7 +4,7 @@
 const burgerBtn = document.querySelector('.menu__icon');
 const burgerMenu = document.querySelector('.menu__body');
 burgerBtn.addEventListener('click', function () {
-    document.body.classList.toggle('_lock')
+    document.body.classList.toggle('_lock');
     burgerBtn.classList.toggle('_active');
     burgerMenu.classList.toggle('_active');
 })
@@ -45,9 +45,13 @@ pageDescr.innerHTML = solarSystem[0].description;
 
 //creating the array of buttons
 const btnsArr = Array.from(document.querySelectorAll('#navMenu>ul>li'));
+const btnsArrPhones = Array.from(document.querySelectorAll('#navMenuPhone>ul>li'))
 
 //adding event listener to every button
 for(const elem of btnsArr){
+    elem.addEventListener('click', changePage);
+}
+for(const elem of btnsArrPhones){
     elem.addEventListener('click', changePage);
 }
 
@@ -60,4 +64,18 @@ function changePage(item){
             pageDescr.innerHTML = elem.description;
         }
     }
+}
+
+//the same function but for devices with screen size less than 767px
+function changePage(item){
+    for(const elem of solarSystem){
+        if(item.target.textContent === elem.name){
+            pageTitle.innerHTML = elem.name;
+            pageImage.src = elem.image;
+            pageDescr.innerHTML = elem.description;
+        }
+    }
+    document.body.classList.toggle('_lock');
+    burgerBtn.classList.toggle('_active');
+    burgerMenu.classList.toggle('_active');
 }
