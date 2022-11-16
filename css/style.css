@@ -69,6 +69,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
+body._lock {
+  overflow: hidden;
+}
+
 .wrapper {
   min-height: 100%;
   width: 100vw;
@@ -223,6 +227,17 @@ footer {
   .menu__icon span {
     top: 50%;
     transform: scale(1) translate(0px, -50%);
+  }
+  .menu__icon._active span {
+    transform: scale(0) translate(0px, -50%);
+  }
+  .menu__icon._active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0px, -50%);
+  }
+  .menu__icon._active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0px, 50%);
   }
   .menu__body {
     position: fixed;
