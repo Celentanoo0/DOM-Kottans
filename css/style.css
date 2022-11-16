@@ -133,17 +133,23 @@ main {
 .sidebar a {
   color: white;
   font-size: 18px;
-  padding: 10px 75px;
-  border-radius: 3px;
   transition: all 0.3s;
 }
-.sidebar a:hover {
+.sidebar li {
+  margin: 40px 0 0 0;
+  border-radius: 3px;
+  transition: all 0.3s;
+  cursor: pointer;
+  padding: 10px 70px;
+  text-align: center;
+}
+.sidebar li:hover {
   background: white;
   color: #2E3640;
   border-radius: 3px;
 }
-.sidebar li {
-  margin: 40px 0 0 0;
+.sidebar li:hover a {
+  color: #2E3640;
 }
 
 .content {

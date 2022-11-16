@@ -58,17 +58,23 @@ main{
     a{
         color: white;
         font-size: 18px;
-        padding: 10px 75px;
-        border-radius: 3px;
         transition: all 0.3s;
-    }
-    a:hover{
-        background: white;
-        color: #2E3640;
-        border-radius: 3px;
     }
     li{
         margin: 40px 0 0 0;
+        border-radius: 3px;
+        transition: all 0.3s;
+        cursor: pointer;
+        padding: 10px 70px;
+        text-align: center;
+    }
+    li:hover{
+        background: white;
+        color: #2E3640;
+        border-radius: 3px;
+        a{
+            color: #2E3640;
+        }
     }
 }
 .content{
