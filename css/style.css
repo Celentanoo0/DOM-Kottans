@@ -99,6 +99,13 @@ header {
   z-index: 10;
 }
 
+.buttons {
+  display: none;
+}
+.buttons a {
+  color: white;
+}
+
 main {
   margin: 60px 0 0 0;
   flex: 1 1 auto;
@@ -148,7 +155,7 @@ main {
   margin: 10px 0;
 }
 .content__imgage {
-  width: 800px;
+  max-width: 800px;
   margin: 0 0 40px 0;
 }
 .content__imgage img {
@@ -160,6 +167,10 @@ main {
 .content__description p {
   margin: 0 20px 15px;
   line-height: 1.3;
+}
+
+.menu__icon {
+  display: none;
 }
 
 footer {
@@ -177,4 +188,82 @@ footer {
   letter-spacing: 1.1px;
   position: relative;
   z-index: 120;
+}
+
+@media (max-width: 767px) {
+  .menu__icon {
+    display: block;
+    z-index: 1000;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    margin: 0 20px;
+  }
+  .menu__icon span,
+.menu__icon::after,
+.menu__icon::before {
+    left: 0px;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    transition: all 0.3s;
+    background: #fff;
+  }
+  .menu__icon::after,
+.menu__icon::before {
+    content: "";
+  }
+  .menu__icon::after {
+    bottom: 0;
+  }
+  .menu__icon::before {
+    top: 0;
+  }
+  .menu__icon span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
+  .menu__body {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgb(46, 54, 64);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: left 0.3s;
+  }
+  .menu__body li:first-child {
+    padding: 20px 0 0 0;
+  }
+  .menu__body li {
+    margin: 70px 0;
+  }
+  .menu__body a {
+    font-size: 30px;
+  }
+  .menu__body._active {
+    left: 0;
+  }
+  .menu__body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 60px;
+    background: #04A7FF;
+  }
+  .buttons {
+    display: block;
+  }
+  .sidebar {
+    display: none;
+  }
+  .content {
+    margin: 0;
+  }
 }
