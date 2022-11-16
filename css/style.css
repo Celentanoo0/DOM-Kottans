@@ -130,27 +130,42 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.sidebar a {
   color: white;
   font-size: 18px;
   transition: all 0.3s;
 }
 .sidebar li {
-  margin: 40px 0 0 0;
+  margin: 30px 0 0 0;
   border-radius: 3px;
   transition: all 0.3s;
-  cursor: pointer;
-  padding: 10px 70px;
-  text-align: center;
+  display: flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .sidebar li:hover {
   background: white;
   color: #2E3640;
   border-radius: 3px;
 }
-.sidebar li:hover a {
+.sidebar input:checked + li {
+  background: white;
   color: #2E3640;
+  border-radius: 3px;
+}
+.sidebar input {
+  display: none;
+}
+.sidebar label {
+  display: inline-block;
+  width: 210px;
+  height: 40px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .content {
