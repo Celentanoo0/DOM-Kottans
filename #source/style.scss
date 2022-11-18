@@ -71,11 +71,6 @@ main{
         color: #2E3640;
         border-radius: 3px;
     }
-    input:checked + li {
-        background: white;
-        color: #2E3640;
-        border-radius: 3px;
-    }
     input{
         display: none;
     }
@@ -90,6 +85,12 @@ main{
         cursor: pointer;
     }
 }
+li._selected{
+    background: white;
+    color: #2E3640;
+    border-radius: 3px;
+}
+
 .content{
     margin: 0 0 0 250px;
     flex: 1 1 auto;
@@ -110,9 +111,10 @@ main{
     }
     &__description{
         font-size: 18px;
+        margin: 25px;
         p{
-            margin: 0 20px 15px;
-            line-height: 1.3;
+            margin: 0 20px 20px;
+            line-height: 1.5;
         }
     }
 }
