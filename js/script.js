@@ -4,6 +4,7 @@
 const burgerBtn = document.querySelector('.menu__icon');
 const burgerMenu = document.querySelector('.menu__body');
 burgerBtn.addEventListener('click', function () {
+    document.body.classList.toggle('_lock');
     burgerBtn.classList.toggle('_active');
     burgerMenu.classList.toggle('_active');
 })
@@ -74,7 +75,8 @@ for(const elem of btnsArrPhones){
     elem.addEventListener('click', changePage);
 }
 
-//function that change the page while the button was clicked
+
+//rendering the content of the page
 function changePage(item){
     for(const elem of solarSystem){
         if(item.target.textContent === elem.name){
@@ -88,6 +90,9 @@ function changePage(item){
             }
         }
     }
-    burgerBtn.classList.toggle('_active');
-    burgerMenu.classList.toggle('_active');
+    if(window.screen.width < 767){
+        document.body.classList.toggle('_lock');
+        burgerBtn.classList.toggle('_active');
+        burgerMenu.classList.toggle('_active');
+    }
 }
